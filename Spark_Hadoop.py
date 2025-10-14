@@ -30,9 +30,10 @@ spark.sql("select userID, name from peoples where friends > 100 order by userID"
 
 output.write\
 .format("json").mode("overwrite")\
-.option("path", "hdfs:///user/maria_dev/spark/job_output/")\
+.option("path", "hdfs:///home/maria_dev/spark/job_output/")\
 .partitionBy("age")\
 .save()
+
 
 
 
