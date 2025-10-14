@@ -14,7 +14,7 @@ myschema = StructType([\
 
 people = spark.read.format("csv")\
     .schema(myschema)\
-    .option("path","hdfs://user/maria_dev/spark/friends.csv")\
+    .option("path","hdfs://home/maria_dev/spark/friends.csv")\
     .load()
 
 people.printSchema()
@@ -33,6 +33,7 @@ output.write\
 .option("path", "hdfs:///user/maria_dev/spark/job_output/")\
 .partitionBy("age")\
 .save()
+
 
 
 
