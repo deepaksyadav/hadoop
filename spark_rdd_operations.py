@@ -10,7 +10,7 @@ data = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 9, 10]
 rdd = sc.parallelize(data)
 
 # -------------------------------
-# 1️⃣ Transformations
+# 1. Transformations
 # -------------------------------
 
 # map: multiply each element by 2
@@ -61,7 +61,7 @@ pair_rdd2 = sc.parallelize([("a", 100), ("b", 200), ("d", 300)])
 rdd_join = pair_rdd.join(pair_rdd2)
 
 # -------------------------------
-# 2️⃣ Actions
+# 2. Actions
 # -------------------------------
 
 print("Original RDD:", rdd.collect())
